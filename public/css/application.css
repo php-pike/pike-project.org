@@ -1,36 +1,57 @@
-* {
-    font-size:11px;
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input {
+    margin: 0;
+    padding: 0;
 }
 html, body {    
-    padding:0px;
-    margin:0px;
+    padding: 0px;
+    margin: 0px;
 }
+body {
+    background: transparent url(../images/background-body.jpg) repeat 0 0;
+}
+body {
+    font-family: "Segoe UI",Calibri,"Myriad Pro",Myriad,"Trebuchet MS",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+}
+
 h1 {
-    font-size:18px;
-    font-weight:bold;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 h3 {
     font-size:14px;
     font-weight:bold;
+    margin: 10px 0;
 }
-td {
-    font:normal 11px verdana, arial, sans-serif;
+p {
+    margin: 10px 0;
 }
-
+a {
+    color: #1165BE;
+    text-decoration: underline;
+}
+a:hover {
+    text-decoration: none;
+}
 #mainContainer {
-    width:1000px;
-    margin:0 auto;    
+    width: 960px;
+    padding: 20px;
+    margin: 25px auto;
+    background: #fff;
+    overflow: auto;
+    border-radius: 20px;
 }
 
 div.source {
     overflow:auto;
-    width:790px;
     white-space: nowrap;    
     background: #E9E9E9;
-    border:3px solid #D9D9D9;
+    border:2px solid #D9D9D9;
     padding:5px;
     margin:25px auto 25px auto;  
     font:normal 14px 'Courier new', arial, verdana;
+    border-radius: 4px;
 }
 
 .phpdefault { color:#0000BB; font-weight: normal;}
@@ -41,9 +62,13 @@ div.source {
     text-decoration: underline;
 }
 
-#navigation {
+#sidebar-left {
     float:left;
     width:150px;
+}
+#navigation {
+    margin: 0;
+    padding: 0;
 }
 #navigation li {
     list-style-type: none;
@@ -63,7 +88,7 @@ div.source {
 }
 div.content {
     float:right;
-    width:800px;
+    width:790px;
 }
 p.intro {
     padding-bottom:10px;
@@ -73,4 +98,7 @@ div.version {
     font-style: italic;
     font-weight: bold;
     margin-bottom:10px;
+}
+.ui-widget {
+    font-size: 11px;
 }

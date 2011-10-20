@@ -3,10 +3,10 @@
     <head> 
         <?php
             $this->headLink()
-            ->prependStylesheet($this->baseUrl() . '/css/jquery-ui/smoothness/jquery-ui-1.8.2.custom.css')
-            ->prependStylesheet($this->baseUrl() . '/css/ui.jqgrid.css')
-            ->prependStylesheet($this->baseUrl() . '/css/jquery.qtip.css')
-            ->prependStylesheet($this->baseUrl() .'/css/application.css');        
+                    ->prependStylesheet($this->baseUrl() .'/css/application.css')
+                    ->prependStylesheet($this->baseUrl() . '/css/jquery.qtip.css')
+                    ->prependStylesheet($this->baseUrl() . '/css/ui.jqgrid.css')
+                    ->prependStylesheet($this->baseUrl() . '/css/jquery-ui/smoothness/jquery-ui-1.8.2.custom.css');
         ?>
         
         <?php echo $this->headTitle() ?>	
@@ -15,31 +15,36 @@
         <?php echo $this->headMeta() ?> 
     </head>
     
-     <body>         
-         <div id="mainContainer">         
-             <ul id="navigation">
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index'))?>">Homepage</a>                     
-                 </li>
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'simple'))?>">Simple example</a>                     
-                 </li>
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'data-callback'))?>">Data callback</a>
-                 </li>
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'default-sorting'))?>">Default sorting</a>
-                 </li>
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'extra-columns'))?>">Extra columns</a>
-                 </li>
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'positions'))?>">Column positions</a>
-                 </li>                   
-                 <li>
-                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'filtering'))?>">Filtering</a>
-                 </li>                                                     
-             </ul>
+     <body>
+         <div id="mainContainer">
+             <div id="sidebar-left">
+                 <div id="header">
+                     <a href="<?= $this->baseUrl() ?>" title="PiKe"><img src="<?= $this->baseUrl() ?>/images/logo.png" /></a>
+                 </div>
+                 <ul id="navigation">
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index'))?>">Homepage</a>                     
+                     </li>
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'simple'))?>">Simple example</a>                     
+                     </li>
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'data-callback'))?>">Data callback</a>
+                     </li>
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'default-sorting'))?>">Default sorting</a>
+                     </li>
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'extra-columns'))?>">Extra columns</a>
+                     </li>
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'positions'))?>">Column positions</a>
+                     </li>                   
+                     <li>
+                         <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'filtering'))?>">Filtering</a>
+                     </li>                                                     
+                 </ul>
+             </div>
              <div class="content">
                  <h1>The power of Pike_Grid!</h1>
                  <p class="intro">Look at these great examples which convince you about the simplicity of Pike_Grid. It's also a good
