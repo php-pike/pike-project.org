@@ -33,9 +33,9 @@ class ExampleController extends Zend_Controller_Action
         $query = $entityManager->createQuery('SELECT p.name AS model, m.name AS manufacturer, pt.name as type ' .
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt');
         
-        $datasource = new Pike_Grid_Datasource_Doctrine($query);
+        $dataSource = new Pike_Grid_DataSource_Doctrine($query);
         
-        $grid = new Pike_Grid($datasource);
+        $grid = new Pike_Grid($dataSource);
         $grid->setCaption('Example phones');
         
         $this->view->grid = $grid;
@@ -48,8 +48,8 @@ class ExampleController extends Zend_Controller_Action
             $this->_helper->layout->disableLayout(true);
             $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
             
-            $datasource->setParameters($request->getPost());
-            echo $datasource->getJSON();
+            $dataSource->setParameters($request->getPost());
+            echo $dataSource->getJSON();
         }
     }
 
@@ -70,9 +70,10 @@ class ExampleController extends Zend_Controller_Action
         $query = $entityManager->createQuery('SELECT p.name AS model, m.name AS manufacturer, pt.name as type ' .
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt');
         
-        $datasource = new Pike_Grid_Datasource_Doctrine($query);
-        
-        $grid = new Pike_Grid($datasource);
+        $dataSource = new Pike_Grid_DataSource_Doctrine($query);
+        $dataSource->excludeColumnsFromEscaping(array('model'));
+            
+        $grid = new Pike_Grid($dataSource);
         $grid->setColumnAttribute('model', 'data', function($row) use($view) {
             $url = $view->url(array('controller' => 'somecontroller', 'action' => 'someaction', 'name' => $row['model']));
             
@@ -89,8 +90,8 @@ class ExampleController extends Zend_Controller_Action
             $this->_helper->layout->disableLayout(true);
             $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
             
-            $datasource->setParameters($request->getPost());
-            echo $datasource->getJSON();
+            $dataSource->setParameters($request->getPost());
+            echo $dataSource->getJSON();
         }
     }        
 
@@ -111,9 +112,9 @@ class ExampleController extends Zend_Controller_Action
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt ' .
                                 'ORDER BY m.name ASC');
         
-        $datasource = new Pike_Grid_Datasource_Doctrine($query);
+        $dataSource = new Pike_Grid_DataSource_Doctrine($query);
         
-        $grid = new Pike_Grid($datasource);
+        $grid = new Pike_Grid($dataSource);
         
         $this->view->grid = $grid;
         $this->view->headScript()->appendScript($grid->getJavascript(), 'text/javascript');
@@ -125,8 +126,8 @@ class ExampleController extends Zend_Controller_Action
             $this->_helper->layout->disableLayout(true);
             $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
             
-            $datasource->setParameters($request->getPost());
-            echo $datasource->getJSON();
+            $dataSource->setParameters($request->getPost());
+            echo $dataSource->getJSON();
         }
     }
     
@@ -148,9 +149,9 @@ class ExampleController extends Zend_Controller_Action
         $query = $entityManager->createQuery('SELECT p.name AS model, m.name AS manufacturer, pt.name as type ' .
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt ');
         
-        $datasource = new Pike_Grid_Datasource_Doctrine($query);
+        $dataSource = new Pike_Grid_DataSource_Doctrine($query);
         
-        $grid = new Pike_Grid($datasource);
+        $grid = new Pike_Grid($dataSource);
         $grid->addColumn('technicalname', function($row) use($view) {
             $url = $view->url(array('controller' => 'some-controller', 'action' => 'edit', 'name' => $row['model']));
             return '<a href="'.$url.'">Edit '.$row['model'].'</a>';
@@ -166,8 +167,8 @@ class ExampleController extends Zend_Controller_Action
             $this->_helper->layout->disableLayout(true);
             $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
             
-            $datasource->setParameters($request->getPost());
-            echo $datasource->getJSON();
+            $dataSource->setParameters($request->getPost());
+            echo $dataSource->getJSON();
         }
     }
     
@@ -192,9 +193,10 @@ class ExampleController extends Zend_Controller_Action
         $query = $entityManager->createQuery('SELECT p.name AS model, m.name AS manufacturer, pt.name as type ' .
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt ');
         
-        $datasource = new Pike_Grid_Datasource_Doctrine($query);
+        $dataSource = new Pike_Grid_DataSource_Doctrine($query);
+        $dataSource->excludeColumnsFromEscaping(array('technicalname'));
         
-        $grid = new Pike_Grid($datasource);
+        $grid = new Pike_Grid($dataSource);
         $grid->setCaption('Column positions')
              ->addColumn('technicalname', function($row) use($view) {
             $url = $view->url(array('controller' => 'some-controller', 'action' => 'edit', 'name' => $row['model']));
@@ -213,8 +215,8 @@ class ExampleController extends Zend_Controller_Action
             $this->_helper->layout->disableLayout(true);
             $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
             
-            $datasource->setParameters($request->getPost());
-            echo $datasource->getJSON();
+            $dataSource->setParameters($request->getPost());
+            echo $dataSource->getJSON();
         }        
     }
     
@@ -238,9 +240,9 @@ class ExampleController extends Zend_Controller_Action
         $query = $entityManager->createQuery('SELECT p.name AS model, m.name AS manufacturer, pt.name as type ' .
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt ');
         
-        $datasource = new Pike_Grid_Datasource_Doctrine($query);
+        $dataSource = new Pike_Grid_DataSource_Doctrine($query);
         
-        $grid = new Pike_Grid($datasource);
+        $grid = new Pike_Grid($dataSource);
         $grid->setId('filtergrid')
              ->setAttribute('hidegrid', false)
              ->setCaption('Filter the grid')
@@ -259,8 +261,8 @@ class ExampleController extends Zend_Controller_Action
             $this->_helper->layout->disableLayout(true);
             $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
             
-            $datasource->setParameters($request->getPost());
-            echo $datasource->getJSON();
+            $dataSource->setParameters($request->getPost());
+            echo $dataSource->getJSON();
         }        
     }    
     
