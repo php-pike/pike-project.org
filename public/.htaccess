@@ -1,5 +1,9 @@
-
 RewriteEngine On
+
+# Only allow the WWW url to prevent double content
+RewriteCond %{HTTP_HOST} !^pike-project.org$
+RewriteRule (.*) http://pike-project.org/$1 [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
 RewriteCond %{REQUEST_FILENAME} -d
