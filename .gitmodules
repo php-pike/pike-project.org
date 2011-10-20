@@ -1,0 +1,3 @@
+[submodule "library/Pike"]
+	path = library/Pike
+	url = https://php-pike@github.com/php-pike/Pike.git
