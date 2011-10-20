@@ -1,0 +1,11 @@
+<p><?php echo $this->intro?></p>
+
+<?php if(strlen($this->version) > 0) : ?>
+<div class="version">Works since version: <?php echo $this->version?></div>
+<?php endif; ?>
+
+<?php echo $this->grid->getHTML() ?>
+
+<div class="source">
+    <?php echo $this->source ?>
+</div>

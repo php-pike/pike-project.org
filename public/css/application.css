@@ -1,0 +1,76 @@
+* {
+    font-size:11px;
+}
+html, body {    
+    padding:0px;
+    margin:0px;
+}
+h1 {
+    font-size:18px;
+    font-weight:bold;
+}
+h3 {
+    font-size:14px;
+    font-weight:bold;
+}
+td {
+    font:normal 11px verdana, arial, sans-serif;
+}
+
+#mainContainer {
+    width:1000px;
+    margin:0 auto;    
+}
+
+div.source {
+    overflow:auto;
+    width:790px;
+    white-space: nowrap;    
+    background: #E9E9E9;
+    border:3px solid #D9D9D9;
+    padding:5px;
+    margin:25px auto 25px auto;  
+    font:normal 14px 'Courier new', arial, verdana;
+}
+
+.phpdefault { color:#0000BB; font-weight: normal;}
+.phpkeyword { color:#007700; font-weight: normal;}
+.phpstring  { color:#DD0000; font-weight: normal;}
+.phpcomment { color:#FF8000; font-weight: normal;}
+.comment {
+    text-decoration: underline;
+}
+
+#navigation {
+    float:left;
+    width:150px;
+}
+#navigation li {
+    list-style-type: none;
+    background:#E9E9E9;
+    margin-bottom:5px;
+    padding:3px;
+}
+#navigation li:hover {
+    background:#D9D9D9;
+}
+#navigation li a {
+    text-decoration: none;
+    display:block;
+}
+#navigation li a:hover {
+    text-decoration: underline;
+}
+div.content {
+    float:right;
+    width:800px;
+}
+p.intro {
+    padding-bottom:10px;
+    border-bottom:2px dotted #B9B9B9;
+}
+div.version {
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom:10px;
+}

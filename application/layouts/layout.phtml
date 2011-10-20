@@ -1,0 +1,78 @@
+<?php echo $this->doctype('XHTML1_TRANSITIONAL') ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <?php
+            $this->headLink()
+            ->prependStylesheet($this->baseUrl() . '/css/jquery-ui/smoothness/jquery-ui-1.8.2.custom.css')
+            ->prependStylesheet($this->baseUrl() . '/css/ui.jqgrid.css')
+            ->prependStylesheet($this->baseUrl() . '/css/jquery.qtip.css')
+            ->prependStylesheet($this->baseUrl() .'/css/application.css');        
+        ?>
+        
+        <?php echo $this->headTitle() ?>	
+        <?php echo $this->headStyle() ?>
+        <?php echo $this->headLink() ?> 
+        <?php echo $this->headMeta() ?> 
+    </head>
+    
+     <body>         
+         <div id="mainContainer">         
+             <ul id="navigation">
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'index', 'action' => 'index'))?>">Homepage</a>                     
+                 </li>
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'simple'))?>">Simple example</a>                     
+                 </li>
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'data-callback'))?>">Data callback</a>
+                 </li>
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'default-sorting'))?>">Default sorting</a>
+                 </li>
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'extra-columns'))?>">Extra columns</a>
+                 </li>
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'positions'))?>">Column positions</a>
+                 </li>                   
+                 <li>
+                     <a href="<?php echo $this->url(array('controller' => 'example', 'action' => 'filtering'))?>">Filtering</a>
+                 </li>                                                     
+             </ul>
+             <div class="content">
+                 <h1>The power of Pike_Grid!</h1>
+                 <p class="intro">Look at these great examples which convince you about the simplicity of Pike_Grid. It's also a good
+                 peice of advise to take a good cool at the 
+                 <a href="http://framework.zend.com/docs/overview" title="Zend Framework documentation" target="_blank">Zend Framework documentation</a>
+                 and <a href="http://www.trirand.com/jqgridwiki/doku.php" target="_blank" title="jqGrid documentation">jqGrid documentation</a>.</p>                 
+                 
+                <?php echo $this->layout()->content ?>
+             </div>
+             
+            <?php
+            $this->headScript()->prependFile($this->baseUrl() . '/js/application.js')
+                ->prependFile($this->baseUrl() . '/js/jquery.jqGrid.min.js')
+                ->prependFile($this->baseUrl() . '/js/i18n/grid.locale-nl.js')
+                ->prependFile($this->baseUrl() . '/js/jquery.qtip.min.js')
+                ->prependFile($this->baseUrl() . '/js/jquery-ui-1.8.4.custom.js')
+                ->prependFile($this->baseUrl() . '/js/jquery-1.5.2.min.js');      
+            ?>
+         </div>
+        <?php echo $this->headScript() ?>
+         
+        <script type="text/javascript">
+
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-5372700-4']);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+
+        </script>         
+    </body>
+</html>
