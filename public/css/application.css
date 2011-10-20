@@ -31,6 +31,9 @@ a {
     color: #1165BE;
     text-decoration: underline;
 }
+img {
+    border: 0;
+}
 a:hover {
     text-decoration: none;
 }
@@ -69,6 +72,7 @@ div.source {
 #navigation {
     margin: 0;
     padding: 0;
+    margin-bottom: 20px;
 }
 #navigation li {
     list-style-type: none;
