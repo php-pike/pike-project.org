@@ -3,7 +3,7 @@ var Application = {
 	},
         
         bindTooltipsToSimpleExample : function() {
-            $("span:contains('Pike_Grid_Datasource_Doctrine')", $('div.source')).qtip({
+            $("span:contains('Pike_Grid_DataSource_Doctrine')", $('div.source')).qtip({
                 'content' : 'This is the place where the datasource is set up' +
                             ' and the Doctrine query is given as parameter. The datasource ' +
                             ' takes care of ordering or limiting the query according to the ' +
