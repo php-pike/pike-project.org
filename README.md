@@ -15,6 +15,7 @@ PHP 5.3.3.
 First you need to clone this repository:
 
     git clone git://github.com/php-pike/pike-project.org.git
+    cd pike-project.org
 
 Then you install composer to load the dependecies:
 
