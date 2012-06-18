@@ -51,7 +51,7 @@ Add local.pike-project in your /etc/hosts:
 
 As last you should make your Doctrine proxy directory writable by the apache user: 
 
-    chmod ...+w ./lib/Application/Entity/Proxy
+    chmod ...+w ./library/Application/Entity/Proxy/
 
 Enable site and reload Apache and it should work!
 
