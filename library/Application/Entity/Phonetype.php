@@ -1,9 +1,11 @@
 <?php
 namespace Application\Entity;
 
+use Doctrine\ORM\Mapping AS ORM;
+
 /**
- * @Table(name="phonetype")
- * @Entity
+ * @ORM\Table(name="phonetype")
+ * @ORM\Entity
  */
 class Phonetype
 {
@@ -11,15 +13,15 @@ class Phonetype
      * 
      * @var integer
      * 
-     * @Column(type="integer",nullable=false)
-     * @Id
-     * @GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="integer",nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */    
     protected $id;
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @ORM\Column(type="string", nullable=false)
      */
     protected $name;
     

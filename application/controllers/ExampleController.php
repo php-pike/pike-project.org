@@ -124,7 +124,7 @@ class ExampleController extends Zend_Controller_Action
         
         if ($request->isXmlHttpRequest()) {
             $this->_helper->layout->disableLayout(true);
-            $viewRenderer = $this->_helper->ViewRenderer->setNoRender(true);
+            $this->_helper->ViewRenderer->setNoRender(true);
             
             $dataSource->setParameters($request->getPost());
             echo $dataSource->getJSON();
@@ -150,6 +150,7 @@ class ExampleController extends Zend_Controller_Action
                                 'FROM Application\Entity\Phone AS p JOIN p.manufacturer AS m JOIN p.phonetype as pt ');
         
         $dataSource = new Pike_Grid_DataSource_Doctrine($query);
+        $dataSource->excludeColumnsFromEscaping(array('technicalname'));
         
         $grid = new Pike_Grid($dataSource);
         $grid->addColumn('technicalname', function($row) use($view) {

@@ -1,0 +1,51 @@
+{
+    "name": "php-pike/pike-project.org",
+    "version": "1.0",
+    "description": "A example ZF1/Doctrine2/Pike application with code examples of PiKe features.",
+    "keywords": ["PiKe", "examples", "Skeleton"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+    {
+        "name": "Kees Schepers",
+        "email": "kees@keesschepers.nl",
+        "homepage": "http://keesschepers.nl/"
+    },
+    {
+        "name": "Pieter Vogelaar",
+        "email": "pieter@pietervogelaar.nl",
+        "homepage": "http://pietervogelaar.nl/"
+    }
+    ],
+    "repositories": [
+    {
+        "type": "package",
+        "package": {
+            "name": "guilhermeblanco/zendframework1-doctrine2",
+            "version": "master-dev",
+            "source": {
+                "url": "git://github.com/guilhermeblanco/ZendFramework1-Doctrine2.git",
+                "type": "git",
+                "reference": "master"
+            },
+            "include-path": ["library/"],
+            "autoload": {
+                "psr-0": {
+                    "Bisna\\": "library"
+                }
+            }
+        }
+    }        
+    ],
+    "require": {
+        "php": ">=5.3",
+        "php-pike/pike": "dev-master",
+        "guilhermeblanco/ZendFramework1-Doctrine2" : "dev-master"
+    },
+    
+    "autoload":     {
+        "psr-0": {
+            "Pike_" : "lib/"
+        }
+    }
+}

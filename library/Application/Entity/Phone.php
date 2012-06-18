@@ -1,9 +1,12 @@
 <?php
 namespace Application\Entity;
 
+use Doctrine\ORM\Mapping AS ORM;
+
 /**
- * @Table(name="phone")
- * @Entity
+ * 
+ * @ORM\Table(name="phone")
+ * @ORM\Entity
  */
 class Phone
 {
@@ -11,23 +14,23 @@ class Phone
      * 
      * @var integer
      * 
-     * @Column(type="integer",nullable=false)
-     * @Id
-     * @GeneratedValue(strategy="IDENTITY")
+     * @ORM\Column(type="integer",nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
     protected $id;
     
     /**
      * 
      * @var integer
-     * @Column(type="integer",nullable=false)	 
+     * @ORM\Column(type="integer",nullable=false)	 
      */
     protected $weight;    
     
     /**
      *
      * @var string
-     * @Column(type="string", nullable=false)
+     * @ORM\Column(type="string", nullable=false)
      */
     protected $name;
     
@@ -35,19 +38,19 @@ class Phone
      * Batterylife in hours
      * 
      * @var integer
-     * @Column(type="integer",nullable=false)	 
+     * @ORM\Column(type="integer",nullable=false)	 
      */    
     protected $batterylife;
     
     /**
-     * @ManyToOne(targetEntity="Phonetype", cascade={"all"})
-     * @JoinColumn(onDelete="CASCADE", onUpdate="CASCADE")
+     * @ORM\ManyToOne(targetEntity="Phonetype", cascade={"all"})
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */    
     protected $phonetype;
     
     /**
-     * @ManyToOne(targetEntity="Manufacturer", cascade={"all"})
-     * @JoinColumn(onDelete="CASCADE", onUpdate="CASCADE")
+     * @ORM\ManyToOne(targetEntity="Manufacturer", cascade={"all"})
+     * @ORM\JoinColumn(onDelete="CASCADE")
      */
     protected $manufacturer;
     
