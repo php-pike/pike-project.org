@@ -30,9 +30,9 @@ After you have run composer and loaded dependecies you add a virtual host. (
 
     <VirtualHost *:80>
         ServerAdmin webmaster@localhost
-	ServerName local.pike-project.org
+        ServerName local.pike-project.org
 
-	SetEnv APPLICATION_ENV development
+        SetEnv APPLICATION_ENV development
 
         DocumentRoot /var/www/pike-project.org/public
         ErrorLog ${APACHE_LOG_DIR}/error.log
