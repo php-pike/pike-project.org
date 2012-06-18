@@ -53,6 +53,10 @@ Enable site and reload Apache and it should work!
 
     sudo a2ensite local.pike-project.org && sudo service apache2 reload
 
+Test your application by pointing your browser to:
+
+    http://local.pike-project.org/
+
 ### HELPING US
 You can help us by providing bugs, forking this project and try other PiKe 
 features, blog, etc. Any help / input is highly appreciated!
