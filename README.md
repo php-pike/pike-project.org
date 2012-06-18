@@ -13,12 +13,15 @@ PHP 5.3.3.
 
 ### INSTALLATION
 First you need to clone this repository:
+
     git clone git://github.com/php-pike/pike-project.org.git
 
 Then you install composer to load the dependecies:
+
     curl -s http://getcomposer.org/installer | php
 
 Then run composer install in the root directory:
+
     php composer.phar install
 
 After you have run composer and loaded dependecies you add a virtual host. ( 
@@ -42,9 +45,11 @@ After you have run composer and loaded dependecies you add a virtual host. (
     </VirtualHost>
 
 Add local.pike-project in your /etc/hosts:
+
     127.0.0.1       local.pike-project.org
 
 Enable site and reload Apache and it should work!
+
     sudo a2ensite local.pike-project.org && sudo service apache2 reload
 
 ### HELPING US
