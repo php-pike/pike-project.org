@@ -10,11 +10,11 @@ define('APPLICATION_ENV', 'development');
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
     realpath(APPLICATION_PATH . '/../library'),
+    realpath(APPLICATION_PATH . '/../vendor'),
     get_include_path(),
 )));
 
-/** Zend_Application */
-require_once 'Zend/Application.php';
+include_once 'autoload.php';
 
 // Creating application
 $application = new Zend_Application(
@@ -73,6 +73,9 @@ $cli->addCommands(array(
     new \Doctrine\ORM\Tools\Console\Command\ConvertMappingCommand(),
     new \Doctrine\ORM\Tools\Console\Command\RunDqlCommand(),
 
+    // Pike commands
+    
+    
 ));
 
 $cli->run();

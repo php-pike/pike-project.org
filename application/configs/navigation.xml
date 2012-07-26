@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <nav>
+        <home>
+            <label>Home</label>
+            <uri>/</uri>
+        </home>
+        
+        <about>
+            <label>About PiKe</label>
+            <route>content</route>
+            <params>
+                <page>about</page>
+            </params>
+        </about>
+        
+        <examples>
+            <label>Examples</label>
+            <route>content</route>
+            <params>
+                <page>examples</page>
+            </params>
+        </examples>
+        
+        <docs>
+            <label>Docs</label>
+            <uri>http://docs.pike-project.org</uri>
+        </docs>
+        
+        <wiki>
+            <label>Wiki</label>
+            <uri>http://wiki.pike-project.org</uri>
+        </wiki>
+        
+        <github>
+            <label>Github</label>            
+            <uri>https://github.com/php-pike/Pike</uri>
+        </github>        
+    </nav>
+</config>

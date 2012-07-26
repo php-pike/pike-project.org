@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping AS ORM;
  * @ORM\Table(name="phonetype")
  * @ORM\Entity
  */
-class Phonetype
+class Phonetype extends Basic
 {
     /**
      * 
@@ -24,14 +24,6 @@ class Phonetype
      * @ORM\Column(type="string", nullable=false)
      */
     protected $name;
-    
-    public function __get($key) {
-        return $this->$key;
-    }
-    
-    public function __set($key, $value) {
-        $this->$key = $value;
-    }    
 }
 
 ?>

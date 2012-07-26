@@ -40,10 +40,35 @@ a:hover {
 #mainContainer {
     width: 960px;
     padding: 20px;
-    margin: 25px auto;
+    margin: 15px auto;
     background: #fff;
     overflow: auto;
     border-radius: 20px;
+}
+
+#loginContainer {
+    width: 960px;
+    margin:0 auto;
+    overflow: auto;
+    margin-top:10px;
+}
+
+#loginContainer form {
+    float:right;
+    width: 500px;
+}
+#loginContainer form .form-item {
+    float:left;
+}
+#loginContainer input.text {
+    width: 100px;   
+    height: 18px;   
+    border:1px solid #929292;
+    background: #efefef;
+}
+#loginContainer input.button {
+    padding:0px 5px 0px 5px;
+    height: 20px;
 }
 
 div.source {
@@ -69,25 +94,25 @@ div.source {
     float:left;
     width:150px;
 }
-#navigation {
+ul.navigation {
     margin: 0;
     padding: 0;
     margin-bottom: 20px;
 }
-#navigation li {
+ul.navigation li {
     list-style-type: none;
     background:#E9E9E9;
     margin-bottom:5px;
     padding:3px;
 }
-#navigation li:hover {
+ul.navigation li:hover {
     background:#D9D9D9;
 }
-#navigation li a {
+ul.navigation li a {
     text-decoration: none;
     display:block;
 }
-#navigation li a:hover {
+ul.navigation li a:hover {
     text-decoration: underline;
 }
 div.content {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="1" assertions="1" failures="0" errors="0" time="0.005457">
+    <testsuite name="Library Test Suite" tests="1" assertions="1" failures="0" errors="0" time="0.005457">
+      <testsuite name="PhoneTest" file="/var/www/pike-project.org/tests/library/Application/Entity/PhoneTest.php" tests="1" assertions="1" failures="0" errors="0" time="0.005457">
+        <testcase name="testSomething" class="PhoneTest" file="/var/www/pike-project.org/tests/library/Application/Entity/PhoneTest.php" line="3" assertions="1" time="0.005457"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="Application Test Suite" tests="0" assertions="0" failures="0" errors="0" time="0.000000"/>
+  </testsuite>
+</testsuites>
