@@ -1,0 +1,155 @@
+input[type="text"],
+input[type="file"],
+input[type="password"],
+textarea,
+select {
+	border: 1px solid #DEEBE3;
+	background: #FFF;
+	width: 180px;
+}
+input.date {
+	width: 100px;
+}
+button,
+input[type="submit"],
+input[type="button"],
+select {
+	font-size: 13px;
+}
+.form-panel .left {
+	float: left;
+	width: 49%;
+	text-align: left;
+}
+.form-panel .right {
+	float: right;
+	width: 49%;
+	text-align: left;
+}
+.form-item .left {
+    float: left;
+    width: 49%;
+}
+#view-content .ui-button {
+    padding: 3px 5px;
+    font-size: 13px;
+}
+#view-content .ui-button-text-only:hover {
+    color: #555;
+}
+#view-content .ui-button-text-only {
+    padding: 3px 7px;
+    line-height: normal;
+}
+#view-content .ui-button-text-only .ui-button-text {
+    padding: 0;
+    line-height: normal;
+}
+.form-item {
+	margin: 0 0 10px;
+    overflow: hidden;
+    width: 100%;
+}
+.form-item .asterisk {
+    color: red;
+    margin-left: 1px;
+}
+.form-panel-to .form-panel-left {
+	width: 68%;
+}
+.form-panel-to .form-panel-left-expanded {
+	width: 100%;
+}
+.form-panel-to .form-panel-right {
+	width: 31%;
+}
+.submit-buttons {
+    border-top: 1px solid #DEEBE3;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.submit-buttons .form-submit,
+.submit-buttons .form-button {
+    float: left;
+    margin-right: 5px;
+    font-size: 13px;
+}
+#submit-buttons-top {
+    overflow: auto;
+}
+#submit-buttons-top .submit-buttons {
+    float: left;
+    width: 200px;
+    border: 0;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+label {
+	font-weight: bold;
+	float: left;
+	width: 130px;
+}
+label.disabled {
+	filter: alpha(opacity=40); /* msie */
+	-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=40)";	/* ms ie8 */
+	-moz-opacity: 0.40; /* firefox 1.0 */
+	-khtml-opacity: 0.40; /* webkit */
+	opacity: 0.40; /* css 3 */
+	zoom: 1; /* trick for hasLayout in IE */
+}
+.form-actions {
+	margin-top: 20px;
+}
+form .input-disabled {
+	background: #eaeaea;
+}
+.form-radio {
+    margin-right: 2px;
+}
+tfoot td {
+	font-weight: bold;
+	background: #DEEBE3;
+}
+.submit-actions {
+	border-top: 1px solid #DEEBE3;
+	padding-top: 10px;
+	margin-top: 15px;
+}
+.submit-actions-no-top {
+	border-top: none;
+	padding-top: 0;
+}
+div.form-daterange .form-item input.datepicker-past, div.form-daterange .form-item input.datepicker {
+	width:80px;
+}
+
+/**
+ * Date range
+ */
+div.form-daterange .form-item {
+    float:left;
+    width: 110px;
+    overflow:auto;
+}
+div.form-daterange .form-item label {
+    width:70px;
+}
+div.form-daterange div.daterange-start {
+    width:180px;
+    margin-bottom: 0px;
+}
+div.form-daterange div.daterange-start input.form-text {
+    float:right;
+    margin-right:5px;
+}
+div.form-daterange div.daterange-end {
+    width: 82px;
+    margin-bottom: 0px;
+}
+textarea.HTMLSimple, textarea.HTMLAdvanced {
+    width: 650px; 
+    height:600px;
+}
+textarea.HTMLSimple {
+    height: 200px;
+}

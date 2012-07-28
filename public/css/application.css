@@ -46,19 +46,37 @@ a:hover {
     border-radius: 20px;
 }
 
-#loginContainer {
-    width: 960px;
+#loginContainer, #userContainer {
+    width: 1000px;
     margin:0 auto;
     overflow: auto;
-    margin-top:10px;
+    margin-top:10px;    
+}
+#loginContainer form, #userContainer div.user-info {
+    float:right;
+    width: 450px; 
+    background: #fff;
+    padding:10px;
+}
+#userContainer div.user-info {    
+    width:250px;
+    overflow:auto;
+    color: #B9B9B9;
+    font-style: italic;
+    line-height: 25px;
+}
+#userContainer div.user-info a.button {
+    float:right;
 }
 
-#loginContainer form {
-    float:right;
-    width: 500px;
-}
-#loginContainer form .form-item {
+#loginContainer form .form-item, #loginContainer form .submit-buttons {
     float:left;
+    margin-right:10px;
+}
+#loginContainer label {
+    color:#727272;
+    text-transform: capitalize;
+    margin-right:10px;
 }
 #loginContainer input.text {
     width: 100px;   
@@ -130,4 +148,28 @@ div.version {
 }
 .ui-widget {
     font-size: 11px;
+}
+#message-container .list .message {
+    list-style-position: inside;
+    margin-left: 5px;
+}
+#message-container .namespace {
+    padding: 5px 5px 5px 26px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+}
+#message-container .namespace-default {
+    background: transparent url('../images/tick.png') no-repeat 5px 5px;
+    border: 1px solid #A8CAD2;
+}
+#message-container .namespace-warning {
+    background: #FEFDE2 url('../images/warning.png') no-repeat 5px 5px;
+    border: 1px solid #E5E181
+}
+#message-container .namespace-error {
+    background: #FFDFDF url('../images/cross.png') no-repeat 5px 5px;
+	border: 1px solid #DD7777;
+}
+#message-container li.error {
+    border: none;
 }

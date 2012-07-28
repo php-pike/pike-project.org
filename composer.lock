@@ -1,5 +1,5 @@
 {
-    "hash": "e87a654f25a183f68dc883c3fb5dd793",
+    "hash": "f4b2e6a4c5f79c7c30a7815c6f185c59",
     "packages": [
         {
             "package": "doctrine/common",
@@ -24,6 +24,10 @@
             "version": "dev-master",
             "source-reference": "c965095832c43e96c93d0272f93ce7fe2d551e78",
             "commit-date": "1343235474"
+        },
+        {
+            "package": "symfony/console",
+            "version": "v2.0.16"
         },
         {
             "package": "zendframework/zendframework1",

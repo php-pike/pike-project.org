@@ -8,9 +8,18 @@
     </head>
 
     <body>
-        <div id="loginContainer">
-            <?php echo $this->loginForm->render() ?>
-        </div>
+        <?php if (Zend_Auth::getInstance()->hasIdentity()) : ?>
+            <div id="userContainer">
+                <div class="user-info">
+                    Welcome back, <?php echo Zend_Auth::getInstance()->getIdentity()->username ?> 
+                    <a class="button" href="<?php echo $this->url(array('controller' => 'user', 'action' => 'logout'), 'default') ?>">
+                        Logout
+                    </a>
+                </div>
+            </div>
+        <?php else : ?>
+            <div id="loginContainer"><?php echo $this->loginForm->render() ?></div>
+        <?php endif; ?>
         <div id="mainContainer">             
             <div id="sidebar-left">
                 <div id="header">
@@ -23,13 +32,8 @@
                     <a href="http://github.com/php-pike" title="Follow PiKe on Github!" target="_blank"><img src="<?php echo $this->baseUrl() ?>/images/github-logo.png" /></a>
                 </div>
             </div>
-            <div class="content">
-                <h1>The power of Pike_Grid!</h1>
-                <p class="intro">Look at these great examples which convince you about the simplicity of Pike_Grid. It's also a good
-                    piece of advise to take a good look at the 
-                    <a href="http://framework.zend.com/docs/overview" title="Zend Framework documentation" target="_blank">Zend Framework documentation</a>
-                    and <a href="http://www.trirand.com/jqgridwiki/doku.php" target="_blank" title="jqGrid documentation">jqGrid documentation</a>.</p>                 
-
+            <div class="content">                
+                <?= $this->flashMessages() ?>                                
                 <?php echo $this->layout()->content ?>
             </div>
         </div>

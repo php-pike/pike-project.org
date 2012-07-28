@@ -40,7 +40,8 @@
     "require": {
         "php": ">=5.3",
         "php-pike/pike": "dev-master",
-        "guilhermeblanco/ZendFramework1-Doctrine2" : "dev-master"
+        "guilhermeblanco/ZendFramework1-Doctrine2" : "dev-master",
+        "symfony/console" : "2.0.16"
     },
     
     "autoload":     {

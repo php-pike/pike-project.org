@@ -31,7 +31,7 @@ $container = $application->getBootstrap()->getResource('doctrine');
 
 // Console
 $cli = new \Symfony\Component\Console\Application(
-    'Doctrine Command Line Interface',
+    'Pike-Project Command Line Interface',
     \Doctrine\Common\Version::VERSION
 );
 
@@ -74,7 +74,7 @@ $cli->addCommands(array(
     new \Doctrine\ORM\Tools\Console\Command\RunDqlCommand(),
 
     // Pike commands
-    
+    new Application_Console_Command_AddUser(),
     
 ));
 
