@@ -5,7 +5,33 @@ var Application = {
         $('input:button, input:submit, a.button, button').button();
             
         this.bindTinyMceEditorToTextArea();
-            
+        this.bindConfirmWindows();    
+    },
+        
+    bindConfirmWindows : function() {
+      $('.confirm').click(function() {
+          
+          var dialog = $('<div></div>').dialog({
+             'modal' : true,
+             'width' : 600,
+             'height' : 400,
+             'buttons' : {
+                 'OK' : function() {
+                     
+                 },
+                 'Cancel' : function() {
+                     $(this).dialog('close');
+                 }
+             }
+          });
+          
+          
+          if($(this).attr('title').length > 0) {
+              $(dialog).dialog('option', 'title', $(this).attr('title'));
+          } else {
+              $(dialog).dialog('option', 'title', 'Are you sure?');
+          }
+      })  
     },
         
     bindTinyMceEditorToTextArea : function() {

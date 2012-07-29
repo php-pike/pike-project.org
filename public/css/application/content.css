@@ -1,0 +1,12 @@
+.contentitem-controls {
+    border-bottom:1px dotted #92a0b3;
+    padding-bottom:5px;  
+    overflow:auto;
+    line-height:25px;
+    color: #d2d2d2;
+    font-style:italic;
+}
+.contentitem-controls .button {
+    float:right;
+    margin-left:10px;
+}

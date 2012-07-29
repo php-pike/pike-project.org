@@ -1,1 +1,10 @@
-Test
+<h1><?php echo $this->contentItem->title?></h1>
+<?php if(Zend_Auth::getInstance()->hasIdentity()) :?>
+<div class="contentitem-controls">
+    <span class="info">Last edit by ... on ...</span>
+    <a class="button confirm" href="<?php echo $this->url(array('controller' => 'content', 'action' => 'delete', 'page' => $this->contentItem->id), 'default')?>">Delete</a>
+    <a class="button" href="<?php echo $this->url(array('controller' => 'content', 'action' => 'edit', 'page' => $this->contentItem->id), 'default')?>">Edit</a>
+</div>
+<?php endif; ?>
+
+<?php echo $this->contentItem->content?>

@@ -54,7 +54,7 @@ a:hover {
 }
 #loginContainer form, #userContainer div.user-info {
     float:right;
-    width: 450px; 
+    width: 500px; 
     background: #fff;
     padding:10px;
 }
@@ -72,11 +72,20 @@ a:hover {
 #loginContainer form .form-item, #loginContainer form .submit-buttons {
     float:left;
     margin-right:10px;
+    width: auto;
+    border:0px;
+    overflow:auto;
+    margin:0px 5px 0px 5px;
+    padding:0px;
 }
+ #loginContainer form .submit-buttons {
+     float:right;
+ }
 #loginContainer label {
     color:#727272;
     text-transform: capitalize;
     margin-right:10px;
+    width: auto;
 }
 #loginContainer input.text {
     width: 100px;   
